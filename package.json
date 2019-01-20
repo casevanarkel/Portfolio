@@ -1,26 +1,20 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
+  "name": "adaptedmindApp",
+  "version": "0.0.1",
+  "description": "An project to recreate adaptedmind.com pages.",
   "engines": {
-    "node": "10.x"
+    "node": "5.9.1"
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
+    "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "^2.5.6",
-    "express": "^4.15.2"
-  },
-  "devDependencies": {
-    "request": "^2.81.0",
-    "tape": "^4.7.0"
+    "express": "4.13.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/casevanarkel/"
   },
   "keywords": [
     "node",

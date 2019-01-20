@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="portfolioApp">
+<head>
+
+    <!-- jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>    
+    
+    <!-- AngularJS src -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+
+    <!-- AngularJS Animate -->
+    <script src="./libs/angular-animate.js"></script>
+
+    <!-- Controllers -->
+    <script src="./pages/portfolio.js"></script>
+
+    <!-- CSS styles -->
+    <style type="text/css">
+
+        .portfolio-directive-container {
+            opacity: 1;
+        }
+
+        .portfolio-directive-container-fade{
+            transition: all 1.5s ease-in-out 0s;
+            -webkit-transition: all 1.5s ease-in-out 0s;
+            -moz-transition: all 1.5s ease-in-out 0s;
+            -ms-transition: all 1.5s ease-in-out 0s; 
+        }
+
+
+        .portfolio-directive-container-fade.ng-hide {
+            opacity: 0;        
+        }
+    
+
+    </style>
+    
+</head>
+
+  <body>
+
+     <div ng-controller="portfolioCtrl as portfolio" ng-show="portfolio.getAppInitialized();" class="portfolio-directive-container portfolio-directive-container-fade" portfolio-directive></div>
+
+  </body>
+
+</html>
