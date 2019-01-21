@@ -52,21 +52,15 @@
             opacity: 1;
         }
 
-        .portfolio-container-fade.ng-enter, .portfolio-container-fade.ng-leave {
+        .portfolio-container-fade {
             transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
             -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
             -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
             -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
         }
 
-        .portfolio-container-fade.ng-enter,
-        .portfolio-container-fade.ng-leave.ng-leave-active {
+        .portfolio-container-fade.ng-show {
             opacity: 0;
-        }
-
-        .portfolio-container-fade.ng-leave,
-        .portfolio-container-fade.ng-enter.ng-enter-active {
-            opacity: 1;
         }
 
 
