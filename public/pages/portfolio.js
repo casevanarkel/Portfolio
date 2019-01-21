@@ -18,6 +18,7 @@
               
                 alert('made it in initializeApp');
 
+                /*
                 //After the window has loaded completely
                 window.addEventListener("load", function(){
 
@@ -32,6 +33,11 @@
                     });
 
                 });
+                */
+
+                $timeout(function() {
+                  portfolioCtrl.setAppState('about');
+                }, 5000);
               
             }
 
