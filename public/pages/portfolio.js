@@ -29,6 +29,20 @@
   });
 
   ///////////////////////ALL HTML ELEMENTS (View in MVC)/////////////////////////
+  //Nav
+  portfolioApp.directive ('nav', function (){
+      return {
+          restrict: 'E',
+          templateUrl: './pages/nav.html',
+          controller: function($scope, $timeout) {
+              navCtrl = this;
+              
+
+          },
+          controllerAs: "navCtrl"// end controller
+      };
+  });
+
   //About view
   portfolioApp.directive ('about', function (){
       return {
@@ -37,32 +51,6 @@
           controller: function($scope, $timeout) {
               aboutCtrl = this;
               
-              /*
-              //Show the modal after the window has loaded
-              this.show = function(){
-                  
-                window.addEventListener("load", function(){;
-
-                    //Set the app state to 'about'
-                    $scope.$apply(function(){ 
-
-                        portfolioCtrl.setAppState('about'); 
-                    });
-
-                });
-                      
-              }
-              */
-
-              /*
-              this.show = function(){
-                  
-                  $timeout(function() {
-                    portfolioCtrl.setAppState('about');
-                  }, 2000);
-                      
-              }*/
-
               this.show = function(){
                   angular.element(function () {
                     $scope.$apply(function(){ 
