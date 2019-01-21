@@ -37,7 +37,7 @@
           controller: function($scope, $timeout) {
               aboutCtrl = this;
               
-              
+              /*
               //Show the modal after the window has loaded
               this.show = function(){
                   
@@ -52,6 +52,7 @@
                 });
                       
               }
+              */
 
               /*
               this.show = function(){
@@ -61,6 +62,13 @@
                   }, 2000);
                       
               }*/
+
+              this.show = function(){
+                  angular.element(document).ready(function () {
+                      alert('ready!');
+                      //portfolioCtrl.setAppState('about');
+                  });
+              }
 
               //Run on page load
               this.show();
