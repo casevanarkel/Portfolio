@@ -67,5 +67,18 @@
       };
   });
 
+  //Work view
+  portfolioApp.directive ('work', function (){
+      return {
+          restrict: 'E',
+          templateUrl: './pages/work.html',
+          controller: function($scope, $timeout) {
+              workCtrl = this;
+              
+
+          },
+          controllerAs: "workCtrl"// end controller
+      };
+  });
 
 })(); 
