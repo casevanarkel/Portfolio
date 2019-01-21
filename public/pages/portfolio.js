@@ -30,7 +30,7 @@
 
   ///////////////////////ALL HTML ELEMENTS (View in MVC)/////////////////////////
   //About view
-  portfolioApp.directive ('aboutDirective', function (){
+  portfolioApp.directive ('about', function (){
       return {
           restrict: 'E',
           templateUrl: './pages/about.html',
