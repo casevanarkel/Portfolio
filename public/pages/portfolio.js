@@ -16,8 +16,6 @@
 
             this.initializeApp = function(){
               
-                alert('made it in initializeApp');
-
                 /*
                 //After the window has loaded completely
                 window.addEventListener("load", function(){
@@ -48,8 +46,6 @@
             this.getAppState = function(){
               return this.appState;
             }
-
-            alert('made it here!');
 
             //Run on page load
             this.initializeApp();
