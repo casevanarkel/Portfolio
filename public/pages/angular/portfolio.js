@@ -33,7 +33,7 @@
   portfolioApp.directive ('nav', function (){
       return {
           restrict: 'E',
-          templateUrl: './pages/nav.html',
+          templateUrl: './pages/angular/nav.html',
           controller: function($scope, $timeout) {
               navCtrl = this;
               
@@ -47,7 +47,7 @@
   portfolioApp.directive ('about', function (){
       return {
           restrict: 'E',
-          templateUrl: './pages/about.html',
+          templateUrl: './pages/angular/about.html',
           controller: function($scope, $timeout) {
               aboutCtrl = this;
               
@@ -71,7 +71,7 @@
   portfolioApp.directive ('work', function (){
       return {
           restrict: 'E',
-          templateUrl: './pages/work.html',
+          templateUrl: './pages/angular/work.html',
           controller: function($scope, $timeout) {
               workCtrl = this;
 
