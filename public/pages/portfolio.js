@@ -51,4 +51,6 @@
         },
         controllerAs: "portfolioCtrl"// end controller
     };
-  }); 
+  });
+
+})(); 
