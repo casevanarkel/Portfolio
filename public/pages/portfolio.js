@@ -64,7 +64,7 @@
               }*/
 
               this.show = function(){
-                  angular.element(document).ready(function () {
+                  angular.element(function () {
                     $scope.$apply(function(){ 
                         portfolioCtrl.setAppState('about'); 
                     });
