@@ -4,12 +4,20 @@
         opacity: 1;
     }
 
-    .body-container-fade {
+    .body-container-fade.ng-hide-remove {
         transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
         -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
         -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
         -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
     }
+
+    .body-container-fade.ng-hide-add {
+        transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
+        -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
+        -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
+        -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
+    }
+
 
     .body-container-fade.ng-hide {
         opacity: 0;
