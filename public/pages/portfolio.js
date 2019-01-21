@@ -5,22 +5,29 @@ angular.module('portfolioApp', ['ngAnimate'])
 
   portfolioCtrl = this;
 
-  this.appInitialized = false;
+  //States: loading, about, work
+  this.appState = 'loading';
 
   this.initializeApp = function(){
     
-    $timeout(function() {  
-      portfolioCtrl.setAppInitialized(true);
-    }, 1000);
+      //After the window has loaded completely
+      window.addEventListener("load", function(){
+
+          //Set the app state to 'about'
+          $scope.$apply(function(){ 
+              portfolioCtrl.setAppState('about'); 
+          });
+
+      });
     
   }
 
-  this.setAppInitialized = function(boolean){
-    this.appInitialized = boolean;
+  this.setAppState = function(state){
+    this.appState = state;
   }
 
-  this.getAppInitialized = function(){
-    return this.appInitialized;
+  this.getAppState = function(){
+    return this.appState;
   }
 
   //Run on page load
