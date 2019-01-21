@@ -74,7 +74,18 @@
           templateUrl: './pages/work.html',
           controller: function($scope, $timeout) {
               workCtrl = this;
-              
+
+              //Sub states to control Work view
+              //Possible states: overview, adaptedmind, rocketlawyer
+              this.workState = 'overview';
+
+              this.setWorkState = function(state){
+                this.workState = state;
+              }
+
+              this.getWorkState = function(){
+                return this.workState;
+              }        
 
           },
           controllerAs: "workCtrl"// end controller
