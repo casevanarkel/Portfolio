@@ -1,51 +1,54 @@
 
-angular.module('portfolioApp', ['ngAnimate'])
+(function() {
 
-.controller('portfolioCtrl', function($timeout, $scope) {
+  var portfolioApp = angular.module('portfolioApp', ['ngAnimate'])
 
-  portfolioCtrl = this;
 
-  //States: loading, about, work
-  this.appState = 'loading';
+  portfolioApp.directive ('portfolioDirective', function ($timeout){
+    return {
+      restrict: 'A',
+        controller: function($scope, $http) {
 
-  this.initializeApp = function(){
-    
-      alert('made it in initializeApp');
+            portfolioCtrl = this;
 
-      //After the window has loaded completely
-      window.addEventListener("load", function(){
+            //States: loading, about, work
+            this.appState = 'loading';
 
-        alert('made it in window.load');
+            this.initializeApp = function(){
+              
+                alert('made it in initializeApp');
 
-          //Set the app state to 'about'
-          $scope.$apply(function(){ 
+                //After the window has loaded completely
+                window.addEventListener("load", function(){
 
-            alert('made it in $scope.apply');
+                  alert('made it in window.load');
 
-              portfolioCtrl.setAppState('about'); 
-          });
+                    //Set the app state to 'about'
+                    $scope.$apply(function(){ 
 
-      });
-    
-  }
+                      alert('made it in $scope.apply');
 
-  this.setAppState = function(state){
-    this.appState = state;
-  }
+                        portfolioCtrl.setAppState('about'); 
+                    });
 
-  this.getAppState = function(){
-    return this.appState;
-  }
+                });
+              
+            }
 
-  alert('made it here!');
+            this.setAppState = function(state){
+              this.appState = state;
+            }
 
-  //Run on page load
-  this.initializeApp();
+            this.getAppState = function(){
+              return this.appState;
+            }
 
-})
+            alert('made it here!');
 
-.directive('portfolioDirective', function() {
-  return {
-    templateUrl: './pages/portfolio.html'
-  };
-});
+            //Run on page load
+            this.initializeApp();
+
+        },
+        controllerAs: "portfolioCtrl"// end controller
+    };
+  }); 

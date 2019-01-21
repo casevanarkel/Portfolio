@@ -20,11 +20,11 @@
     <!-- CSS styles -->
     <style type="text/css">
 
-        .portfolio-directive-container {
+        .portfolio-container {
             opacity: 1;
         }
 
-        .portfolio-directive-container-fade{
+        .portfolio-container-fade{
             transition: all 1.5s ease-in-out 0s;
             -webkit-transition: all 1.5s ease-in-out 0s;
             -moz-transition: all 1.5s ease-in-out 0s;
@@ -32,7 +32,7 @@
         }
 
 
-        .portfolio-directive-container-fade.ng-hide {
+        .portfolio-container-fade.ng-hide {
             opacity: 0;        
         }
     
@@ -41,10 +41,10 @@
     
 </head>
 
-  <body>
-
-     <div ng-controller="portfolioCtrl as portfolio" class="portfolio-directive-container portfolio-directive-container-fade" portfolio-directive>        
-     </div>
+  <body portfolio>      
+     
+    <div ng-show="portfolioCtrl.getAppState() == 'loading'" class="portfolio-container portfolio-container-fade">Loading!</div>
+    <div ng-show="portfolioCtrl.getAppState() == 'about'" class="portfolio-container portfolio-container-fade">About!</div>
 
   </body>
 
