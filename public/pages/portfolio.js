@@ -42,7 +42,7 @@ angular.module('portfolioApp', ['ngAnimate'])
   //Run on page load
   this.initializeApp();
 
-});
+})
 
 .directive('portfolioDirective', function() {
   return {
