@@ -36,7 +36,8 @@
           templateUrl: './pages/about.html',
           controller: function($scope, $timeout) {
               aboutCtrl = this;
-   
+              
+              /*
               //Show the modal after the window has loaded
               this.show = function(){
                   
@@ -49,6 +50,14 @@
                     });
 
                 });
+                      
+              }*/
+
+              this.show = function(){
+                  
+                  $timeout(function() {
+                    portfolioCtrl.setAppState('about');
+                  }, 2000);
                       
               }
 
