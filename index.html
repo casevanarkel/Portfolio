@@ -20,22 +20,55 @@
     <!-- CSS styles -->
     <style type="text/css">
 
+        .loading-container {
+            opacity: 1;
+        }
+
+        .loading-container-fade.ng-enter {
+            transition: all 0s cubic-bezier(.6,.17,.64,.99) 0s;
+            -webkit-transition: all 0s cubic-bezier(.6,.17,.64,.99) 0s;
+            -moz-transition: all 0s cubic-bezier(.6,.17,.64,.99) 0s;
+            -ms-transition: all 0s cubic-bezier(.6,.17,.64,.99) 0s;
+        }
+
+        .loading-container-fade.ng-leave {
+            transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
+            -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
+            -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
+            -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
+        }
+
+        .loading-container-fade.ng-enter,
+        .loading-container-fade.ng-leave.ng-leave-active {
+            opacity: 0;
+        }
+
+        .loading-container-fade.ng-leave,
+        .loading-container-fade.ng-enter.ng-enter-active {
+            opacity: 1;
+        }
+    
         .portfolio-container {
             opacity: 1;
         }
 
-        .portfolio-container-fade{
-            transition: all 1.5s ease-in-out 0s;
-            -webkit-transition: all 1.5s ease-in-out 0s;
-            -moz-transition: all 1.5s ease-in-out 0s;
-            -ms-transition: all 1.5s ease-in-out 0s; 
+        .portfolio-container-fade.ng-enter, .portfolio-container-fade.ng-leave {
+            transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
+            -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
+            -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
+            -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
         }
 
-
-        .portfolio-container-fade.ng-hide {
-            opacity: 0;        
+        .portfolio-container-fade.ng-enter,
+        .portfolio-container-fade.ng-leave.ng-leave-active {
+            opacity: 0;
         }
-    
+
+        .portfolio-container-fade.ng-leave,
+        .portfolio-container-fade.ng-enter.ng-enter-active {
+            opacity: 1;
+        }
+
 
     </style>
     
@@ -43,8 +76,8 @@
 
   <body portfolio-directive>      
      
-    <div ng-show="portfolioCtrl.getAppState() == 'loading'" class="portfolio-container portfolio-container-fade">Loading!</div>
-    <div ng-show="portfolioCtrl.getAppState() == 'about'" class="portfolio-container portfolio-container-fade">About!</div>
+    <div ng-if="portfolioCtrl.getAppState() == 'loading'" class="loading-container loading-container-fade">Loading!</div>
+    <div ng-if="portfolioCtrl.getAppState() != 'loading'" class="portfolio-container portfolio-container-fade">About!</div>
 
   </body>
 
