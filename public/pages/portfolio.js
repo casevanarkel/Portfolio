@@ -65,8 +65,8 @@
 
               this.show = function(){
                   angular.element(document).ready(function () {
-                      alert('ready!');
-                      //portfolioCtrl.setAppState('about');
+                      //alert('ready!');
+                      portfolioCtrl.setAppState('about');
                   });
               }
 
