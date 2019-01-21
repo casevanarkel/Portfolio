@@ -3,7 +3,8 @@
 
   var portfolioApp = angular.module('portfolioApp', ['ngAnimate'])
 
-
+  ///////////////////////ALL OBJECT ELEMENTS (Model in MVC)/////////////////////////
+  //Portfolio objects and items management
   portfolioApp.directive ('portfolioDirective', function ($timeout){
     return {
       restrict: 'A',
@@ -14,31 +15,6 @@
             //States: loading, about, work
             this.appState = 'loading';
 
-            this.initializeApp = function(){
-              
-                /*
-                //After the window has loaded completely
-                window.addEventListener("load", function(){
-
-                  alert('made it in window.load');
-
-                    //Set the app state to 'about'
-                    $scope.$apply(function(){ 
-
-                      alert('made it in $scope.apply');
-
-                        portfolioCtrl.setAppState('about'); 
-                    });
-
-                });
-                */
-
-                $timeout(function() {
-                  portfolioCtrl.setAppState('about');
-                }, 5000);
-              
-            }
-
             this.setAppState = function(state){
               this.appState = state;
             }
@@ -47,12 +23,42 @@
               return this.appState;
             }
 
-            //Run on page load
-            this.initializeApp();
-
         },
         controllerAs: "portfolioCtrl"// end controller
     };
   });
+
+  ///////////////////////ALL HTML ELEMENTS (View in MVC)/////////////////////////
+  //About view
+  portfolioApp.directive ('aboutDirective', function (){
+      return {
+          restrict: 'E',
+          templateUrl: './pages/about.html',
+          controller: function($scope, $timeout) {
+              aboutCtrl = this;
+   
+              //Show the modal after the window has loaded
+              this.show = function(){
+                  
+                window.addEventListener("load", function(){;
+
+                    //Set the app state to 'about'
+                    $scope.$apply(function(){ 
+
+                        portfolioCtrl.setAppState('about'); 
+                    });
+
+                });
+                      
+              }
+
+              //Run on page load
+              this.show();
+
+          },
+          controllerAs: "aboutCtrl"// end controller
+      };
+  });
+
 
 })(); 

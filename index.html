@@ -77,7 +77,9 @@
   <body portfolio-directive>      
      
     <div ng-if="portfolioCtrl.getAppState() == 'loading'" class="loading-container loading-container-fade">Loading!</div>
-    <div ng-if="portfolioCtrl.getAppState() != 'loading'" class="portfolio-container portfolio-container-fade">About!</div>
+    <div ng-if="portfolioCtrl.getAppState() != 'loading'" class="portfolio-container portfolio-container-fade">
+        <about></about>
+    </div>
 
   </body>
 
