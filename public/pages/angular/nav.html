@@ -64,7 +64,7 @@
 	  font-style: normal;
 	}
 
-	.clickable {
+	.clickable:hover {
 		cursor: pointer;
 	}
 
@@ -116,7 +116,7 @@
 <div class="nav-container">
 	<img class="nav-logo" src="./pages/images/cva_logo.png"/>
 	<div class="nav-links-container">
-		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('work')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work'}">Work</span>
-		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('about')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'about', 'clickable': portfolioCtrl.getAppState() != 'about'}">Home</span>
+		<span class="nav-link" ng-click="portfolioCtrl.setAppState('work')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work', 'nav-link-fade': portfolioCtrl.getAppState() != 'work'}">Work</span>
+		<span class="nav-link" ng-click="portfolioCtrl.setAppState('about')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'about', 'clickable': portfolioCtrl.getAppState() != 'about', 'nav-link-fade': portfolioCtrl.getAppState() != 'about'}">About</span>
 	</div>
 </div>
