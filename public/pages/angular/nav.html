@@ -1,1 +1,20 @@
-<span><img width="100px" height="auto" src="./pages/images/cva_logo.png"/></span><button ng-click="portfolioCtrl.setAppState('work')">Work</button><button ng-click="portfolioCtrl.setAppState('about')">About</button>
+<style type="text/css">
+	
+	.nav-container {
+		height: 70px;
+		width: 1170px;
+	}
+
+	.nav-logo {
+		width: 100px;
+		height: auto;
+		padding-top: 20px;
+	}
+
+</style>
+
+<div class="nav-container">
+	<img class="nav-logo" src="./pages/images/cva_logo.png"/>
+	<span cl ng-click="portfolioCtrl.setAppState('work')">Work</span>
+	<span ng-click="portfolioCtrl.setAppState('about')">Home</span>
+</div>
