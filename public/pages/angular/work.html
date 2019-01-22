@@ -1,1 +1,32 @@
-<div ng-show="portfolioCtrl.getAppState() == 'work'" class="body-container body-container-fade">Work content!</div>
+ <style type="text/css">
+ 	.work-container {
+        width: 100%;
+        max-width: 1100px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 1;
+    }
+
+    .work-container-fade.ng-hide-remove {
+        transition: all .25s ease-out .25s;
+        -webkit-transition: all .25s ease-out .25s;
+        -moz-transition: all .25s ease-out .25s;
+        -ms-transition: all .25s ease-out .25s;
+    }
+
+    .work-container-fade.ng-hide-add {
+        transition: all .25s ease-in 0s;
+        -webkit-transition: all .25s ease-in 0s;
+        -moz-transition: all .25s ease-in 0s;
+        -ms-transition: all .25s ease-in 0s;
+    }
+
+
+    .work-container-fade.ng-hide {
+        opacity: 0;
+        margin-top: -20px;
+    }
+ </style>
+
+<div ng-show="portfolioCtrl.getAppState() == 'work'" class="work-container work-container-fade">Work content!</div>
