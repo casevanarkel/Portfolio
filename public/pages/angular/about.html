@@ -33,8 +33,23 @@
         color: #343534;
     }
 
+    .about-title-I::selection {
+        background: transparent;
+        color: #01cfaa;
+    }
+
+    .about-title-Am::selection {
+        background: transparent;
+        color: #ffb400;
+    }
+
+    .about-title-Case::selection {
+        background: transparent;
+        color: #ff3c00;
+    }
+
 </style>
 
 <div ng-show="portfolioCtrl.getAppState() == 'about'" class="about-container about-container-fade">
-    <h1 class="about-title">I am Case.</h1>
+    <h1 class="about-title"><span class="about-title-I">I </span><span class="about-title-Am">Am </span><span class="about-title-Case">Case</span></h1>
 </div>
