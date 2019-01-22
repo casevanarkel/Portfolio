@@ -73,20 +73,10 @@
 
               this.show = function() {
 
-                //Using jQuery--when the nav bar fade transition ends, then change the state to about
-                $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
-                  
-                  //Write in scope.apply because if in jQuery we much to re-run the digest cycle
-                  $scope.$apply(function(){
-
-                    portfolioCtrl.setAppState('about'); 
-
-                    //Stop listening, because the child links within the container have transitions too
-                    $(".nav-container").off();
-
-                  });
-                  
-                });
+                //Using timeout corresponding to css transition time for nav container because for page load jQuery .on transitionEnd is unreliable
+                $timeout(function() {
+                  portfolioCtrl.setAppState('about');
+                }, 250);
 
               }
 
