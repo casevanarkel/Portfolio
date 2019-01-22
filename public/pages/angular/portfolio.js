@@ -81,6 +81,7 @@
 
                     portfolioCtrl.setAppState('about'); 
 
+                    //Stop listening, because the child links within the container have transitions too
                     $(".nav-container").off();
 
                   });
