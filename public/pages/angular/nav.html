@@ -63,7 +63,7 @@
 
 </style>
 
-<div ng-show="portfolioCtrl.getAppState() != 'loading'" class="nav-container">
+<div ng-show="portfolioCtrl.getAppState() != 'loading'" class="nav-container nav-container-fade">
 	<img class="nav-logo" src="./pages/images/cva_logo.png"/>
 	<div class="nav-links-container">
 		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('work')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work'}">Work</span>
