@@ -12,7 +12,7 @@
 
             portfolioCtrl = this;
 
-            //States: loading, about, work
+            //States: loading, nav, about, work, null
             this.appState = 'loading';
 
             this.setAppState = function(state){
@@ -21,6 +21,7 @@
 
               var newState = state;
 
+              //Delay correspondences with CSS transition time for Work and About containers hiding and showing, so container showing doesn't overlap
               $timeout(function() {
                 portfolioCtrl.appState = newState;
               }, 250);
@@ -44,7 +45,17 @@
           templateUrl: './pages/angular/nav.html',
           controller: function($scope, $timeout) {
               navCtrl = this;
-              
+
+              this.show = function(){
+                  angular.element(function () {
+                    $scope.$apply(function(){ 
+                        portfolioCtrl.setAppState('nav'); 
+                    });
+                  });
+              }
+
+              //Run on page load
+              this.show();   
 
           },
           controllerAs: "navCtrl"// end controller
@@ -58,13 +69,14 @@
           templateUrl: './pages/angular/about.html',
           controller: function($scope, $timeout) {
               aboutCtrl = this;
-              
-              this.show = function(){
-                  angular.element(function () {
-                    $scope.$apply(function(){ 
-                        portfolioCtrl.setAppState('about'); 
-                    });
-                  });
+
+              this.show = function() {
+                //Case's code to play the intro video and inject the first two middle videos
+                $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+                    
+                    alert('nav transition has ended!');
+                    
+                });
               }
 
               //Run on page load
