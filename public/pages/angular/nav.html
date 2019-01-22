@@ -4,7 +4,20 @@
 		height: 70px;
 		width: 1170px;
 		margin: 0 auto 0 auto;
+		opacity: 1;
 	}
+
+    .nav-container-fade {
+        transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
+        -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
+        -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
+        -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
+    }
+
+    .nav-container-fade.ng-hide {
+        opacity: 0;
+        margin: -10px auto 0 auto;
+    }
 
 	.nav-logo {
 		width: 100px;
@@ -50,7 +63,7 @@
 
 </style>
 
-<div class="nav-container">
+<div ng-show="portfolioCtrl.getAppState() != 'loading'" class="nav-container">
 	<img class="nav-logo" src="./pages/images/cva_logo.png"/>
 	<div class="nav-links-container">
 		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('work')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work'}">Work</span>
