@@ -81,6 +81,8 @@
 
                     portfolioCtrl.setAppState('about'); 
 
+                    $(".nav-container").off();
+
                   });
                   
                 });
