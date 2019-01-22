@@ -17,6 +17,7 @@
 
             this.setAppState = function(state){
               this.appState = null;
+              state = state;
               $timeout(function(state) {
                 this.appState = state;
               }, 250);
