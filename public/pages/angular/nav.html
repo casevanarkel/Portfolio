@@ -12,10 +12,16 @@
 		padding-top: 20px;
 	}
 
+	.nav-links {
+		display: inline-block;
+	}
+
 </style>
 
 <div class="nav-container">
 	<img class="nav-logo" src="./pages/images/cva_logo.png"/>
-	<span cl ng-click="portfolioCtrl.setAppState('work')">Work</span>
-	<span ng-click="portfolioCtrl.setAppState('about')">Home</span>
+	<div class="nav-links">
+		<span cl ng-click="portfolioCtrl.setAppState('work')">Work</span>
+		<span ng-click="portfolioCtrl.setAppState('about')">Home</span>
+	</div>
 </div>
