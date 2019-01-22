@@ -47,6 +47,7 @@
               navCtrl = this;
 
               this.show = function(){
+                  //When the window has loaded, then set hide the loading animation
                   angular.element(function () {
                     $scope.$apply(function(){ 
                         portfolioCtrl.setAppState('nav'); 
@@ -72,15 +73,18 @@
 
               this.show = function() {
 
-                    $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
-                      
-                      $scope.$apply(function(){
+                //Using jQuery--when the nav bar fade transition ends, then change the state to about
+                $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+                  
+                  //Write in scope.apply because if in jQuery we much to re-run the digest cycle
+                  $scope.$apply(function(){
 
-                        alert('nav transition has ended!');
+                    portfolioCtrl.setAppState('about'); 
 
-                      });
-                      
-                    });
+                  });
+                  
+                });
+
               }
 
               //Run on page load
