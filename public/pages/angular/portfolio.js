@@ -51,6 +51,7 @@
                   angular.element(function () {
                     $scope.$apply(function(){ 
                         portfolioCtrl.setAppState('nav'); 
+                        aboutCtrl.show();
                     });
                   });
               }
@@ -76,12 +77,9 @@
                 //Using timeout corresponding to css transition time for nav container because for page load jQuery .on transitionEnd is unreliable
                 $timeout(function() {
                   portfolioCtrl.setAppState('about');
-                }, 1000);
+                }, 250);
 
               }
-
-              //Run on page load
-              this.show();
 
           },
           controllerAs: "aboutCtrl"// end controller
