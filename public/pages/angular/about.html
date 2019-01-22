@@ -1,17 +1,20 @@
 <style type="text/css">
 	
-    .body-container {
+    .about-container {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
         opacity: 1;
     }
 
-    .body-container-fade.ng-hide-remove {
+    .about-container-fade.ng-hide-remove {
         transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
         -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
         -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
         -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
     }
 
-    .body-container-fade.ng-hide-add {
+    .about-container-fade.ng-hide-add {
         transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
         -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
         -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
@@ -19,7 +22,7 @@
     }
 
 
-    .body-container-fade.ng-hide {
+    .about-container-fade.ng-hide {
         opacity: 0;
     }
 
@@ -34,6 +37,6 @@
 
 </style>
 
-<div ng-show="portfolioCtrl.getAppState() == 'about'" class="body-container body-container-fade">
+<div ng-show="portfolioCtrl.getAppState() == 'about'" class="about-container about-container-fade">
     <h1 class="about-title">I am Case.</h1>
 </div>
