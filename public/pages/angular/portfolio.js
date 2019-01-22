@@ -71,12 +71,14 @@
               aboutCtrl = this;
 
               this.show = function() {
-                //Case's code to play the intro video and inject the first two middle videos
-                $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
-                    
-                    alert('nav transition has ended!');
-                    
-                });
+                  
+                  alert('showing!');
+
+                  $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+                      
+                      alert('nav transition has ended!');
+                      
+                  });
               }
 
               //Run on page load
