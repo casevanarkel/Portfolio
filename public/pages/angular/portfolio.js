@@ -16,11 +16,14 @@
             this.appState = 'loading';
 
             this.setAppState = function(state){
+              
               this.appState = null;
-              state = state;
-              $timeout(function(state) {
-                this.appState = state;
-              }, 250);
+
+              var newState = state;
+
+              $timeout(function() {
+                this.appState = newState;
+              }, 1000);
             }
 
             this.getAppState = function(){
