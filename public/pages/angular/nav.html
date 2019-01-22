@@ -24,7 +24,7 @@
 		margin: 0 25px 0 25px;
 		font-size: 20px;
 		color: #757575;
-		font-weight: 700;
+		font-weight: 500;
 	}
 
 	.nav-link:hover {
@@ -52,7 +52,8 @@
 <div class="nav-container">
 	<img class="nav-logo" src="./pages/images/cva_logo.png"/>
 	<div class="nav-links-container">
-		<span class="nav-link" ng-click="portfolioCtrl.setAppState('work')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work', 'nav-link-fade': portfolioCtrl.getAppState() != 'work'}">Work</span>
-		<span class="nav-link" ng-click="portfolioCtrl.setAppState('about')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'about', 'clickable': portfolioCtrl.getAppState() != 'about', 'nav-link-fade': portfolioCtrl.getAppState() != 'about'}">About</span>
+		<span class="nav-link" ng-click="portfolioCtrl.setAppState('work')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work'}">Work</span>
+		<span class="nav-link" ng-click="portfolioCtrl.setAppState('about')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'about', 'clickable': portfolioCtrl.getAppState() != 'about'}">About</span>
+		<!--, 'nav-link-fade': portfolioCtrl.getAppState() != 'work'-->
 	</div>
 </div>
