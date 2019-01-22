@@ -87,7 +87,7 @@
 		font-family: ProximaNovaCn, "Helvetica Neue", Helvetica, sans-serif;
 		margin: 0 25px 0 25px;
 		font-size: 20px;
-		color: #666;
+		color: #757575;
 		font-weight: 700;
 	}
 
@@ -95,7 +95,7 @@
 		color: #000;
 	}
 
-	.nav-link:active {
+	.nav-link-active {
 		color: #36f2b8;
 	}
 
@@ -112,7 +112,7 @@
 <div class="nav-container">
 	<img class="nav-logo" src="./pages/images/cva_logo.png"/>
 	<div class="nav-links-container">
-		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('work')">Work</span>
-		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('about')">Home</span>
+		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('work')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work'}">Work</span>
+		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('about')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'about'}">Home</span>
 	</div>
 </div>
