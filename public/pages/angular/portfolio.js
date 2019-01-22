@@ -72,13 +72,15 @@
 
               this.show = function() {
 
-                  $scope.$apply(function(){ 
                     $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
                       
-                      alert('nav transition has ended!');
+                      $scope.$apply(function(){
+
+                        alert('nav transition has ended!');
+
+                      });
                       
                     });
-                  });
               }
 
               //Run on page load
