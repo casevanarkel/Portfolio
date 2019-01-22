@@ -32,19 +32,16 @@
     .about-title-I::selection {
         background: transparent;
         color: #01cfaa;
-        font-size: 4.5em;
     }
 
     .about-title-Am::selection {
         background: transparent;
         color: #ffb400;
-        font-size: 4.5em;
     }
 
     .about-title-Case::selection {
         background: transparent;
         color: #ff3c00;
-        font-size: 4.5em;
     }
 
     .about-hero {
@@ -59,9 +56,19 @@
         }
     }
 
+    .about-summary {
+        font-family: ProximaNovaCn, "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: 200;
+        font-size: 1.2em;
+        color: #757575;
+    }
+
 </style>
 
 <div ng-show="portfolioCtrl.getAppState() == 'about'" class="about-container about-container-fade">
     <h1 class="about-title"><span class="about-title-I">I </span><span class="about-title-Am">Am </span><span class="about-title-Case">Case</span></h1>
     <img class="about-hero" src="./pages/images/case-kelly-hero.jpg">
+    <p class="about-summary">
+        I am a creative UX engineer that puts the user at the center of everything I build. In addition to engineering, I'm a naturally holistic thinker drawn to the spectrum of business challenges that require both left and right brain thinking. Prior to teaching myself how to write code, I was trained as both an artist and a marketer.<br>My professional mission is to create beautiful experiences that both educate and ignite joy.<br>Outside of my profession, I'm passionate about running, exploring the outdoors with my partner (see pretty lady above), reading philosophy, painting, playing guitar, and generally tinkering.<br>I am also working on a side project: a health app that displays various health metrics including exercise, phone screen time, and work time.<br>Let's grab tea, I'd love the opportunity to get to know you better.
+    </p>
 </div>
