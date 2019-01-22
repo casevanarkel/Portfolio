@@ -22,8 +22,9 @@
               var newState = state;
 
               $timeout(function() {
-                this.appState = newState;
+                portfolioCtrl.appState = newState;
               }, 1000);
+              
             }
 
             this.getAppState = function(){
