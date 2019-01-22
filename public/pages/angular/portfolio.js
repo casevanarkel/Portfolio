@@ -23,8 +23,8 @@
 
               $timeout(function() {
                 portfolioCtrl.appState = newState;
-              }, 1000);
-              
+              }, 250);
+
             }
 
             this.getAppState = function(){
