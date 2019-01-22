@@ -71,13 +71,13 @@
               aboutCtrl = this;
 
               this.show = function() {
-                  
-                  alert('showing!');
 
-                  $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+                  $scope.$apply(function(){ 
+                    $(".nav-container").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
                       
                       alert('nav transition has ended!');
                       
+                    });
                   });
               }
 
