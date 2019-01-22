@@ -12,19 +12,25 @@
 		margin-top: 20px;
 	}
 
-	.nav-links {
-		display: inline-block;
-		height: 100%;
-		vertical-align: middle;
-		float: right;
+	.nav-links-container {
+	    display: inline-block;
+	    height: 100%;
+	    padding-top: 20px;
+	    float: right;
+	}
+
+	.nav-link {
+		font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+		margin: 0 25px 0 25px;
+		font-size: 16px;
 	}
 
 </style>
 
 <div class="nav-container">
 	<img class="nav-logo" src="./pages/images/cva_logo.png"/>
-	<div class="nav-links">
-		<span ng-click="portfolioCtrl.setAppState('work')">Work</span>
-		<span ng-click="portfolioCtrl.setAppState('about')">Home</span>
+	<div class="nav-links-container">
+		<span class="nav-links" ng-click="portfolioCtrl.setAppState('work')">Work</span>
+		<span class="nav-links" ng-click="portfolioCtrl.setAppState('about')">Home</span>
 	</div>
 </div>
