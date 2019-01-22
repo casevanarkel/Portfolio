@@ -76,7 +76,7 @@
                 //Using timeout corresponding to css transition time for nav container because for page load jQuery .on transitionEnd is unreliable
                 $timeout(function() {
                   portfolioCtrl.setAppState('about');
-                }, 500);
+                }, 1000);
 
               }
 
