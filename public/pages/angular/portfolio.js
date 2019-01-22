@@ -16,7 +16,10 @@
             this.appState = 'loading';
 
             this.setAppState = function(state){
-              this.appState = state;
+              this.appState = null;
+              $timeout(function(state) {
+                this.appState = state;
+              }, 250);
             }
 
             this.getAppState = function(){
