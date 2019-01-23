@@ -1,8 +1,12 @@
-
-.clickable:hover {
-	cursor: pointer;
+body {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	letter-spacing: .25px;
 }
 
 a {
 	text-decoration: none;
+}
+
+.clickable:hover {
+	cursor: pointer;
 }
