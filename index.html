@@ -28,86 +28,15 @@
     <!-- Controllers -->
     <script src="./pages/angular/portfolio.js"></script>
 
-    <!-- Proxima nova font -->
-    <script src="https://use.typekit.net/rst7yez.js"></script>
-    
-    <style type="text/css">
-        .tk-proxima-nova{
-            font-family:"proxima-nova",sans-serif;
-        }.tk-proxima-nova-condensed{
-            font-family:"proxima-nova-condensed",sans-serif;
-        }
-    </style>
-
-    <style type="text/css">
-        @font-face{font-family:tk-proxima-nova-n1;src:url(https://use.typekit.net/af/3d2951/00000000000000000001781f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("woff2"),url(https://use.typekit.net/af/3d2951/00000000000000000001781f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("woff"),url(https://use.typekit.net/af/3d2951/00000000000000000001781f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("opentype");font-weight:100;font-style:normal;}
-        @font-face{font-family:tk-proxima-nova-n3;src:url(https://use.typekit.net/af/3fc9b5/000000000000000000017821/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/3fc9b5/000000000000000000017821/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/3fc9b5/000000000000000000017821/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}
-        @font-face{font-family:tk-proxima-nova-n5;src:url(https://use.typekit.net/af/bb2266/000000000000000000017825/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/bb2266/000000000000000000017825/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/bb2266/000000000000000000017825/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;}
-        @font-face{font-family:tk-proxima-nova-condensed-n3;src:url(https://use.typekit.net/af/ab2a1b/000000000000000000017831/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/ab2a1b/000000000000000000017831/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/ab2a1b/000000000000000000017831/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}
-    </style>
-
-    <!--<script>try{Typekit.load({ async: true });}catch(e){}</script>-->
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="./pages/images/cva_favicon.png"/>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./pages/css/portfolio.css">
 
-    <!-- CSS styles -->
-    <style type="text/css">
-
-        .loading-container {
-            opacity: 1;
-        }
-
-        .loading-container-fade.ng-enter {
-            transition: all 0s cubic-bezier(.6,.17,.64,.99) 0s;
-            -webkit-transition: all 0s cubic-bezier(.6,.17,.64,.99) 0s;
-            -moz-transition: all 0s cubic-bezier(.6,.17,.64,.99) 0s;
-            -ms-transition: all 0s cubic-bezier(.6,.17,.64,.99) 0s;
-        }
-
-        .loading-container-fade.ng-leave {
-            transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
-            -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
-            -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
-            -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 0s;
-        }
-
-        .loading-container-fade.ng-enter,
-        .loading-container-fade.ng-leave.ng-leave-active {
-            opacity: 0;
-        }
-
-        .loading-container-fade.ng-leave,
-        .loading-container-fade.ng-enter.ng-enter-active {
-            opacity: 1;
-        }
-    
-        /*
-        .portfolio-container {
-            opacity: 1;
-        }
-
-        .portfolio-container-fade {
-            transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
-            -webkit-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
-            -moz-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
-            -ms-transition: all 1s cubic-bezier(.6,.17,.64,.99) 1s;
-        }
-
-        .portfolio-container-fade.ng-hide {
-            opacity: 0;
-        }
-        */
-
-
-    </style>
-    
 </head>
 
-  <body style="margin: 0 8px 0 8px;" portfolio-directive>      
+  <body portfolio-directive>      
     
     <div ng-if="portfolioCtrl.getAppState() == 'loading'" class="loading-container loading-container-fade">Loading!</div>
     
