@@ -63,18 +63,26 @@
         color: #757575;
     }
 
+    .about-link {
+        font-weight: 400;
+    }
+
+    .about-link:hover {
+        color: #000;
+    }
+
 </style>
 
 <div ng-show="portfolioCtrl.getAppState() == 'about'" class="about-container about-container-fade">
     <h1 class="about-title"><span class="about-title-I">I </span><span class="about-title-Am">Am </span><span class="about-title-Case">Case</span></h1>
     <img class="about-hero" src="./pages/images/case-kelly-hero.jpg">
     <p class="about-summary">
-        I am a creative UX engineer that puts the user at the center of everything I build. In addition to engineering, I'm a naturally holistic thinker drawn to the spectrum of business challenges that require both left and right brain thinking. Prior to teaching myself how to write code, I was trained as both an artist and a marketer.
+        I am a creative UX engineer who puts the user at the center of everything I help build. In addition to engineering, I'm a naturally holistic thinker drawn to the spectrum of business challenges that require both left and right brain thinking. Prior to teaching myself how to write code, I was trained as both an artist and a marketer.
         <br><br>
         My professional mission is to create beautiful experiences that both educate and ignite joy.
         <br><br>
         Outside of my profession, I'm passionate about running, exploring the outdoors with my partner (see pretty lady above), reading philosophy, painting, playing guitar, and generally tinkering.
         <br><br>I am also working on a side project: a health app that displays various health metrics including exercise, phone screen time, and work time.
-        <br><br>Let's grab tea, I'd love the opportunity to get to know you better.
+        <br><br>Please say <a class="about-link clickable" href="mailto:casevanarkel@gmail.com">hello</a>, or you can also find me on <a class="about-link clickable" href="https://www.linkedin.com/in/case-van-arkel-0a8169140">Linkedin</a>.
     </p>
 </div>
