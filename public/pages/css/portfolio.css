@@ -8,6 +8,10 @@ a {
 	text-decoration: none;
 }
 
+br::selection {
+	background: transparent;
+}
+
 .clickable:hover {
 	cursor: pointer;
 }
