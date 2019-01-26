@@ -107,7 +107,7 @@
               }  
 
               this.show = function() {
-                player.play();
+                this.hoverPlay();
               }
 
               ////// Vimeo player /////
@@ -136,7 +136,19 @@
                   console.log('bufferend the video');
                   $//('#loading').hide();              
               });
-     
+
+              this.hoverPlay = function() {
+                video.hover(this.playVideo, this.pauseVideo);
+              }
+
+              this.playVideo = function() {
+                player.play();
+              }
+              
+              this.pauseVideo = function() {
+                player.pause();
+              }
+
 
           },
           controllerAs: "workCtrl"// end controller
