@@ -146,6 +146,7 @@
                 player.pause();
               }
 
+              navCtrl.show();
 
           },
           controllerAs: "workCtrl"// end controller
