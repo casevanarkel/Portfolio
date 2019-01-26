@@ -19,6 +19,9 @@ br::selection {
 
 .loading-container {
     opacity: 1;
+    -ms-transform: scale(5, 5); /* IE 9 */
+  	-webkit-transform: scale(5, 5); /* Safari */
+  	transform: scale(5, 5);
 }
 
 .loading-container-fade.ng-enter {
