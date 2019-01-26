@@ -38,6 +38,28 @@
   });
 
   ///////////////////////ALL HTML ELEMENTS (View in MVC)/////////////////////////
+  //Nav
+  portfolioApp.directive ('nav', function (){
+      return {
+          restrict: 'E',
+          templateUrl: './pages/angular/nav.html',
+          controller: function($scope, $timeout) {
+              navCtrl = this;
+
+              this.show = function(){
+                  //When the window has loaded, then set hide the loading animation
+                  angular.element(function () {
+                    $scope.$apply(function(){ 
+                        portfolioCtrl.setAppState('nav'); 
+                        aboutCtrl.show();
+                    });
+                  });
+              }
+
+          },
+          controllerAs: "navCtrl"// end controller
+      };
+  });
 
   //About view
   portfolioApp.directive ('about', function (){
@@ -58,32 +80,6 @@
 
           },
           controllerAs: "aboutCtrl"// end controller
-      };
-  });
-
-  //Nav
-  portfolioApp.directive ('nav', function (){
-      return {
-          restrict: 'E',
-          templateUrl: './pages/angular/nav.html',
-          controller: function($scope, $timeout) {
-              navCtrl = this;
-
-              this.show = function(){
-                  //When the window has loaded, then set hide the loading animation
-                  angular.element(function () {
-                    $scope.$apply(function(){ 
-                        portfolioCtrl.setAppState('nav'); 
-                        aboutCtrl.show();
-                    });
-                  });
-              }
-
-              //Run on page load
-              this.show();   
-
-          },
-          controllerAs: "navCtrl"// end controller
       };
   });
 
