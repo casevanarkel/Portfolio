@@ -46,10 +46,14 @@
           controller: function($scope, $timeout) {
               navCtrl = this;
 
-
               this.show = function(){
-                portfolioCtrl.setAppState('nav'); 
-                aboutCtrl.show();
+                  //When the window has loaded, then set hide the loading animation
+                  angular.element(function () {
+                    $scope.$apply(function(){ 
+                        portfolioCtrl.setAppState('nav'); 
+                        aboutCtrl.show();
+                    });
+                  });
               }
 
           },
