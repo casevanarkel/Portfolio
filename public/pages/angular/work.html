@@ -19,11 +19,51 @@
         opacity: 0;
         margin-top: -20px;
     }
+
+    .work-title {
+        font-weight: 600;
+        font-size: 4.2em;
+        color: #343534;
+        margin-block-end: 0;
+    }
+
+    .work-title-Math::selection {
+        background: transparent;
+        color: #6d9eeb;
+    }
+
+    .work-title-Super::selection {
+        background: transparent;
+        color: #ffb400;
+    }
+
+    .work-title-Skills::selection {
+        background: transparent;
+        color: #ff6d00;
+    }
+
+    .work-subtitle {
+		font-size: 20px;
+		color: #757575;
+		font-weight: 500;    	
+    }
+
+    .work-subtitle::selection {
+    	background: transparent;
+        color: #6d9eeb;
+    }
+
+    .work-subtitle-name {
+		color: #000;    	
+    }
+
  </style>
 
 <div ng-show="portfolioCtrl.getAppState() == 'work'" class="work-container work-container-fade">
 
 	<div class="clickable">
+		<h1 class="work-title"><span class="work-title-Math">Math</span><span class="wor-title-Super">Super</span><span class="work-title-Skills">Skills</span></h1>
+		<h3 class="work-subtitle">Team: <span class="work-subtitle-name">AdaptedMind</span></h3>
 		<iframe id="video" src="https://player.vimeo.com/video/313478029?background=1&loop=1&autoplay=0&muted=0" style="position:relative; width: 25%; height: auto;"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	</div>
 
