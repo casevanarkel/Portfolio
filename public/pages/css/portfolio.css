@@ -44,3 +44,9 @@ br::selection {
 .loading-container-fade.ng-enter.ng-enter-active {
     opacity: 1;
 }
+
+.nav-sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
