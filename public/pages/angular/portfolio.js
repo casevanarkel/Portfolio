@@ -111,7 +111,7 @@
               }
 
               ////// Vimeo player /////
-              var video = document.querySelector('#video');
+              var video = $('#video');
               var player = new Vimeo.Player(video);
 
               player.on('play', function() {
