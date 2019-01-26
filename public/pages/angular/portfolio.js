@@ -38,6 +38,29 @@
   });
 
   ///////////////////////ALL HTML ELEMENTS (View in MVC)/////////////////////////
+
+  //About view
+  portfolioApp.directive ('about', function (){
+      return {
+          restrict: 'E',
+          templateUrl: './pages/angular/about.html',
+          controller: function($scope, $timeout) {
+              aboutCtrl = this;
+
+              this.show = function() {
+
+                //Using timeout corresponding to css transition time for nav container because for page load jQuery .on transitionEnd is unreliable
+                $timeout(function() {
+                  portfolioCtrl.setAppState('about');
+                }, 1500);
+
+              }
+
+          },
+          controllerAs: "aboutCtrl"// end controller
+      };
+  });
+
   //Nav
   portfolioApp.directive ('nav', function (){
       return {
@@ -61,28 +84,6 @@
 
           },
           controllerAs: "navCtrl"// end controller
-      };
-  });
-
-  //About view
-  portfolioApp.directive ('about', function (){
-      return {
-          restrict: 'E',
-          templateUrl: './pages/angular/about.html',
-          controller: function($scope, $timeout) {
-              aboutCtrl = this;
-
-              this.show = function() {
-
-                //Using timeout corresponding to css transition time for nav container because for page load jQuery .on transitionEnd is unreliable
-                $timeout(function() {
-                  portfolioCtrl.setAppState('about');
-                }, 1500);
-
-              }
-
-          },
-          controllerAs: "aboutCtrl"// end controller
       };
   });
 
