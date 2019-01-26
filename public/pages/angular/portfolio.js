@@ -104,7 +104,39 @@
 
               this.getWorkState = function(){
                 return this.workState;
-              }        
+              }  
+
+              this.show = function() {
+                player.play();
+              }
+
+              ////// Vimeo player /////
+              var video = document.querySelector('#video');
+              var player = new Vimeo.Player(video);
+
+              player.on('play', function() {
+                  console.log('Played the video');
+              });
+
+              player.on('ended', function() {
+                  console.log('Finished the video');
+              });
+
+              player.on('loaded', function() {
+                  console.log('Loaded the video');
+              });
+
+              player.on('bufferstart', function() {
+                  console.log('bufferstart the video');
+                  //$('#loading').show();
+                  
+              });
+
+              player.on('bufferend', function() {
+                  console.log('bufferend the video');
+                  $//('#loading').hide();              
+              });
+     
 
           },
           controllerAs: "workCtrl"// end controller
