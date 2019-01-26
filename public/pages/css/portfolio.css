@@ -48,14 +48,14 @@ br::selection {
 .lds-ellipsis {
   display: inline-block;
   position: relative;
-  width: 88px;
-  height: 88px;
+  width: 64px;
+  height: 64px;
 }
 .lds-ellipsis div {
   position: absolute;
   top: 27px;
-  width: 22px;
-  height: 22px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: #757575;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
