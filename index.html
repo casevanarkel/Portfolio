@@ -124,7 +124,9 @@
 
   <body portfolio-directive>      
     
-    <div ng-if="portfolioCtrl.getAppState() == 'loading'" class="loading-container loading-container-fade">Loading!</div>
+    <div ng-if="portfolioCtrl.getAppState() == 'loading'" class="loading-container loading-container-fade">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
     
     <div>
         <nav class="nav-sticky"></nav>
