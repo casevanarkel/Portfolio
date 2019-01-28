@@ -74,7 +74,7 @@
     .about-social {
         display: inline-block;
         vertical-align: top;
-        text-align: right;
+        text-align: center;
         width: 25%;
         margin-top: 50px;
     }
@@ -85,6 +85,12 @@
         color: #757575;
         position: relative;
         bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        .social-link {
+            display: block;
+        }
     }
 
     .social-link-fade {
