@@ -43,12 +43,12 @@
       return {
           restrict: 'E',
           templateUrl: './pages/angular/nav.html',
-          controller: function($scope, $timeout) {
+          controller: function($scope, $timeout, $document) {
               navCtrl = this;
 
               this.show = function(){
                   //When the document has loaded, then set hide the loading animation
-                    angular.element(document).ready(function () {
+                    $document.ready(function () {
                         portfolioCtrl.setAppState('nav'); 
                         aboutCtrl.show();
                     });
