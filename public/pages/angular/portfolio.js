@@ -49,10 +49,8 @@
               this.show = function(){
                   //When the document has loaded, then set hide the loading animation
                     angular.element(document).ready(function () {
-                        $scope.$apply(function(){ 
-                          portfolioCtrl.setAppState('nav'); 
-                          aboutCtrl.show();
-                        });
+                        portfolioCtrl.setAppState('nav'); 
+                        aboutCtrl.show();
                     });
               }
 
