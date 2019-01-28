@@ -103,7 +103,6 @@
               this.show = function() {
                 this.hoverPlay();
               }
-              */
 
               ////// Vimeo player /////
               var video = $('#video');
@@ -143,6 +142,7 @@
               this.pauseVideo = function() {
                 player.pause();
               }
+              */
 
           },
           controllerAs: "workCtrl"// end controller
