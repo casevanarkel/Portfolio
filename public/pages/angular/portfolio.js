@@ -47,7 +47,7 @@
               navCtrl = this;
 
               this.touchNavLink = function(){
-                $('#work-link','#about-link').on({ 'touchstart' : function(){
+                $('#work-link').on({ 'touchstart' : function(){
                   alert('touching!');
                 } });
               }
