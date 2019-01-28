@@ -1,3 +1,7 @@
+@-ms-viewport{
+  width: device-width;
+}
+
 body {
 	font-family: "canada-type-gibson", "Helvetica Neue", Helvetica, sans-serif;
 	letter-spacing: .25px;
