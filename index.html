@@ -132,10 +132,10 @@
     
     <div>
         <nav class="nav-sticky"></nav>
-        <div ng-if="portfolioCtrl.getAppState() == 'about'">
+        <div ng-show="portfolioCtrl.getAppState() == 'about'">
             <about></about>
         </div>
-        <div ng-if="portfolioCtrl.getAppState() == 'work'">
+        <div ng-show="portfolioCtrl.getAppState() == 'work'">
             <work></work>
         </div>
     </div>
