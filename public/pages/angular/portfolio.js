@@ -47,13 +47,13 @@
               navCtrl = this;
 
               this.show = function(){
-                  //When the window has loaded, then set hide the loading animation
-                  angular.element(function () {
-                    $scope.$apply(function(){ 
-                        portfolioCtrl.setAppState('nav'); 
-                        aboutCtrl.show();
+                  //When the document has loaded, then set hide the loading animation
+                    angular.element(document).ready(function () {
+                        $scope.$apply(function(){ 
+                          portfolioCtrl.setAppState('nav'); 
+                          aboutCtrl.show();
+                        });
                     });
-                  });
               }
 
           },
@@ -145,8 +145,6 @@
               this.pauseVideo = function() {
                 player.pause();
               }
-
-              navCtrl.show();
 
           },
           controllerAs: "workCtrl"// end controller
