@@ -132,8 +132,12 @@
     
     <div>
         <nav class="nav-sticky"></nav>
-        <about></about>
-        <work></work>
+        <div ng-if="portfolioCtrl.getAppState() == 'about'">
+            <about></about>
+        </div>
+        <div ng-if="portfolioCtrl.getAppState() == 'work'">
+            <work></work>
+        </div>
     </div>
 
     <script src="https://player.vimeo.com/api/player.js"></script>
