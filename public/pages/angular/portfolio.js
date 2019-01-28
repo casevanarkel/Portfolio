@@ -46,10 +46,28 @@
           controller: function($scope, $timeout, $document) {
               navCtrl = this;
 
+              this.touch = false;
+
+              this.getTouch = function(){
+                return this.touch;
+              }
+
+              this.setTouch = function(bool){
+                this.touch = bool;
+              }
+
               this.touchNavLink = function(){
                 $('#work-link').on({ 'touchstart' : function(){
-                  alert('touching!');
-                } });
+                  $scope.$apply(function(){
+                    navCtrl.setTouch(true);
+                  });
+                }});
+
+                $('#work-link').on({ 'touchend' : function(){
+                  $scope.$apply(function(){
+                    navCtrl.setTouch(false);
+                  });
+                }});
               }
 
           },
