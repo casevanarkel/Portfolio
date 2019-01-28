@@ -118,18 +118,13 @@
     -->
 
 </head>
-
   <body portfolio-directive>      
-    
-    <div>{{portfolioCtrl.getAppState();}}</div>
-
     <div ng-if="portfolioCtrl.getAppState() == 'loading'" class="loading-container loading-container-fade">
         <div class="spinner">
           <div class="dot1"></div>
           <div class="dot2"></div>
         </div>
     </div>
-    
     <div>
         <nav class="nav-sticky"></nav>
         <div ng-show="portfolioCtrl.getAppState() == 'about'">
@@ -139,9 +134,6 @@
             <work></work>
         </div>
     </div>
-
     <script src="https://player.vimeo.com/api/player.js"></script>
-
   </body>
-
 </html>
