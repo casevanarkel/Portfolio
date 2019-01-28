@@ -46,6 +46,11 @@
           controller: function($scope, $timeout, $document) {
               navCtrl = this;
 
+              this.touchNavLink = function(){
+                $('#work-link','#about-link',).on({ 'touchstart' : function(){
+                  alert('touching!');
+                } });
+              }
 
           },
           controllerAs: "navCtrl"// end controller
@@ -68,6 +73,9 @@
                     $timeout(function() {
                       portfolioCtrl.setAppState('about');
                     }, 1500);
+
+                    //touch listener
+                    navCtrl.touchNavLink();
                 });
               }
 
