@@ -46,13 +46,6 @@
           controller: function($scope, $timeout, $document) {
               navCtrl = this;
 
-              this.show = function(){
-                  //When the document has loaded, then set hide the loading animation
-                    $document.ready(function () {
-                        portfolioCtrl.setAppState('nav'); 
-                        aboutCtrl.show();
-                    });
-              }
 
           },
           controllerAs: "navCtrl"// end controller
@@ -67,14 +60,19 @@
           controller: function($scope, $timeout) {
               aboutCtrl = this;
 
-              this.show = function() {
-
-                //Using timeout corresponding to css transition time for nav container because for page load jQuery .on transitionEnd is unreliable
-                $timeout(function() {
-                  portfolioCtrl.setAppState('about');
-                }, 1500);
-
+              this.show = function(){
+                //When the about element in the document has loaded, hide the loading animation and show the nav, then about
+                angular.element(document).ready(function () {
+                    portfolioCtrl.setAppState('nav'); 
+                     //Using timeout corresponding to css transition time for nav container because for page load jQuery .on transitionEnd is unreliable
+                    $timeout(function() {
+                      portfolioCtrl.setAppState('about');
+                    }, 1500);
+                });
               }
+
+              //Run on page load
+              this.show();
 
           },
           controllerAs: "aboutCtrl"// end controller
