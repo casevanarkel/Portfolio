@@ -99,9 +99,11 @@
                 return this.workState;
               }  
 
+              /*
               this.show = function() {
                 this.hoverPlay();
               }
+              */
 
               ////// Vimeo player /////
               var video = $('#video');
