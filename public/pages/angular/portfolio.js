@@ -17,14 +17,20 @@
 
             this.setAppState = function(state){
               
-              this.appState = null;
+              if(this.appState != state){
 
-              var newState = state;
+                this.appState = null;
 
-              //Delay correspondences with CSS transition time for Work and About containers hiding and showing, so container showing doesn't overlap
-              $timeout(function() {
-                portfolioCtrl.appState = newState;
-              }, 250);
+                var newState = state;
+
+                //Delay correspondences with CSS transition time for Work and About containers hiding and showing, so container showing doesn't overlap
+                $timeout(function() {
+                  portfolioCtrl.appState = newState;
+                }, 250);
+
+              } else {
+                //Do nothing
+              }
 
             }
 

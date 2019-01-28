@@ -68,19 +68,13 @@
         -ms-transition: all .25s cubic-bezier(.6,.17,.64,.99) 0s;
 	}
 
-	.nav-link-touch-scale {
-	  -ms-transform: scale(2,3); /* IE 9 */
-	  -webkit-transform: scale(2,3); /* Safari */
-	  transform: scale(2,3); /* Standard syntax */
-	}
-
 
 </style>
 
 <div ng-show="portfolioCtrl.getAppState() != 'loading'" class="nav-container nav-container-fade">
 	<img class="nav-logo" src="./pages/images/cva_logo.png" alt="cva-logo" title="Case Van Arkel" />
 	<div class="nav-links-container">
-		<span id="work-link" class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('work'); workCtrl.show();" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work', 'nav-link-animate': portfolioCtrl.getAppState() != 'work', 'nav-link-touch-scale': portfolioCtrl.getAppState() != 'work' && navCtrl.getTouch() == true}">Work</span>
-		<span id="about-link" class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('about')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'about', 'clickable': portfolioCtrl.getAppState() != 'about', 'nav-link-animate': portfolioCtrl.getAppState() != 'about', 'nav-link-touch-scale': portfolioCtrl.getAppState() != 'about' && navCtrl.getTouch() == true}">About</span>
+		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('work'); workCtrl.show();" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work', 'nav-link-animate': portfolioCtrl.getAppState() != 'work'}">Work</span>
+		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('about')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'about', 'clickable': portfolioCtrl.getAppState() != 'about', 'nav-link-animate': portfolioCtrl.getAppState() != 'about'}">About</span>
 	</div>
 </div>
