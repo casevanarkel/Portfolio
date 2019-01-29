@@ -8,13 +8,14 @@ body {
 	margin: 0 15px 15px 15px;
 }
 
+body::selection {
+    background: transparent;
+    color: #6d9eeb;
+}
+
 a {
 	text-decoration: none;
 	color: #000;
-}
-
-br::selection {
-	background: transparent;
 }
 
 .clickable:hover {
