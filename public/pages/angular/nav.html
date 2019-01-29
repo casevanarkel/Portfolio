@@ -72,7 +72,7 @@
 </style>
 
 <div ng-show="portfolioCtrl.getAppState() != 'loading'" class="nav-container nav-container-fade">
-	<img class="nav-logo" src="./pages/images/cva_logo.png" alt="cva-logo" title="Case Van Arkel" />
+	<img class="nav-logo" src="https://d2ek17290dpzlg.cloudfront.net/cva_logo.png" alt="cva-logo" title="Case Van Arkel" />
 	<div class="nav-links-container">
 		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('work'); workCtrl.show();" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'work', 'clickable': portfolioCtrl.getAppState() != 'work', 'nav-link-animate': portfolioCtrl.getAppState() != 'work'}">Work</span>
 		<span class="nav-link nav-link-fade" ng-click="portfolioCtrl.setAppState('about')" ng-class="{'nav-link-active': portfolioCtrl.getAppState() == 'about', 'clickable': portfolioCtrl.getAppState() != 'about', 'nav-link-animate': portfolioCtrl.getAppState() != 'about'}">About</span>
