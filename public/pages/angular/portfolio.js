@@ -105,25 +105,20 @@
                 return this.workState;
               }  
 
-              /*
-              this.show = function() {
-                this.hoverPlay();
-              }
-
               ////// Vimeo player /////
-              var video = $('#video');
+              var video = $('#video-mobile');
               var player = new Vimeo.Player(video);
 
               player.on('play', function() {
-                  console.log('Played the video');
+                  //console.log('Played the video');
               });
 
               player.on('ended', function() {
-                  console.log('Finished the video');
+                  //console.log('Finished the video');
               });
 
               player.on('loaded', function() {
-                  console.log('Loaded the video');
+                  //console.log('Loaded the video');
               });
 
               player.on('bufferstart', function() {
@@ -148,7 +143,6 @@
               this.pauseVideo = function() {
                 player.pause();
               }
-              */
 
           },
           controllerAs: "workCtrl"// end controller
