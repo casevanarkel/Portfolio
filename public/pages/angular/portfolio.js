@@ -26,6 +26,10 @@
                 //Delay correspondences with CSS transition time for Work and About containers hiding and showing, so container showing doesn't overlap
                 $timeout(function() {
                   portfolioCtrl.appState = newState;
+
+                  // change the path
+                  $location.path(portfolioCtrl.appState);
+
                 }, 250);
 
               } else {
@@ -69,10 +73,13 @@
               this.show = function(){
                 //When the about element in the document has loaded, hide the loading animation and show the nav, then about
                 angular.element(document).ready(function () {
+
                     portfolioCtrl.setAppState('nav'); 
+
                      //Using timeout corresponding to css transition time for nav container because for page load jQuery .on transitionEnd is unreliable
                     $timeout(function() {
                       portfolioCtrl.setAppState('about');
+
                     }, 1500);
                 });
               }
